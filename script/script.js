@@ -5,6 +5,12 @@ function node() {
    b.innerText='this is ad through java script'
    div.appendChild(b)
 }
-function fnt(params) {
-    
+function json(params) {
+    var a=localStorage.getItem('item')
+    a=JSON.parse(a)
+    a.push(params)
+    //a.append(params)
+    console.log(a)
+    localStorage.setItem('item',JSON.stringify(a))
+
 }
